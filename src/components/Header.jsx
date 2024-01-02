@@ -36,9 +36,16 @@ function Header() {
   },
   ]
 
+  const headerStyles = {
+    position: 'sticky',
+    top: 0, // Adjust the value as needed to set the scroll threshold for sticking
+    padding: '1.5rem',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    background: 'rgba(173, 216, 230, 0.8)', // Change the RGB values and alpha transparency as needed
+  };
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='py-3 shadow' style={{headerStyles}}>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>

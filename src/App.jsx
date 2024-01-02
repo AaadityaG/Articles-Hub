@@ -34,7 +34,7 @@ function App() {
     //   </div>
     // </div>
 
-    <div className='min-h-screen flex flex-col bg-gray-400'>
+    <div className='min-h-screen flex flex-col ' style={{background: 'linear-gradient(135deg, #fa6161, #ffff79)'}}>
       <Header />
 
         <main className='flex-grow'>
