@@ -31,7 +31,7 @@ function Home() {
                             />
                             {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
                             <div className="relative z-10 text-center text-white">
-                                <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold leading-tight mb-4" style={{textShadow: '4px 4px red'}}>
+                                <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold leading-tight mb-4" style={{textShadow: '4px 4px 10px red'}}>
                                 Discover. Write. Connect.
                                 </h1>
                                 <p className="text-lg md:text-xl xl:text-2xl" style={{textShadow: '2px 2px black'}}>

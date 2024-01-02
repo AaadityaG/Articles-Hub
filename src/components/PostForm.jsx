@@ -78,15 +78,17 @@ export default function PostForm({ post }) {
                     placeholder="Title"
                     className="mb-4"
                     {...register("title", { required: true })}
+                    
                 />
                 <Input
                     label="Slug :"
                     placeholder="Slug"
-                    className="mb-4"
+                    className="mb-4 "
                     {...register("slug", { required: true })}
                     onInput={(e) => {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
                     }}
+                    disabled
                 />
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
