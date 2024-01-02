@@ -3,8 +3,17 @@ import { Link } from 'react-router-dom'
 import Logo from './Logo'
 
 export default function Footer() {
+
+    const headerStyles = {
+        position: 'sticky',
+        top: 0, // Adjust the value as needed to set the scroll threshold for sticking
+        padding: '1.5rem',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        background: 'rgba(173, 216, 230, 0.8)', // Change the RGB values and alpha transparency as needed
+        };
+
   return (
-    <section className="relative overflow-hidden py-10 bg-gray-400 border border-t-2 border-t-black">
+    <section className="relative overflow-hidden py-10 border border-t-2 border-t-black" style={{headerStyles}}>
             <div className="relative z-10 mx-auto max-w-7xl px-4">
                 <div className="-m-6 flex flex-wrap">
                     <div className="w-full p-6 md:w-1/2 lg:w-5/12">
