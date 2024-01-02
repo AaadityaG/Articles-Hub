@@ -21,10 +21,10 @@ function AllPosts() {
                 className=" w-2/6"
             />
             <h2 className="mt-4 text-black text-2xl font-semibold">
-                Oops! No articles found.
+                Loading the articles..
             </h2>
             <p className="text-black text-lg text-center mt-2">
-                It looks like there are no articles available at the moment.
+                {/* It looks like there are no articles available at the moment. */} Till then..
                 <br /> Why not start creating your own masterpiece?
             </p>
             </div>
