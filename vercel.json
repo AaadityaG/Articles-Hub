@@ -1,5 +1,16 @@
 {
     "rewrites":  [
-      {"source": "/(.*)", "destination": "/"}
+      {
+        "source": "/", "destination": "/all-posts"
+      },
+      {
+        "source": "/", "destination": "/all-posts"
+      },
+      {
+        "source": "/", "destination": "/post/(.*)"
+      },
+      {
+        "source": "/", "destination": "/add-post*"
+      }
     ]
 }
