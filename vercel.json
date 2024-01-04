@@ -10,7 +10,10 @@
         "source": "/", "destination": "/post/(.*)"
       },
       {
-        "source": "/", "destination": "/add-post*"
+        "source": "/", "destination": "/add-post"
+      },
+      {
+        "source": "/add-post", "destination": "/post/(.*)"
       }
     ]
 }
