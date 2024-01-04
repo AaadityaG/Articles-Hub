@@ -6,7 +6,8 @@ import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import { AuthLayout, Login } from './components/index.js'
+import { AuthLayout, Login, ErrorPage } from './components/index.js'
+// import ErrorPage from './components/index.js'
 
 
 import AddPost from "./pages/AddPost.jsx";
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
         {
             path: "/post/:slug",
             element: <Post />,
+        },
+        {
+            path: "/*",
+            element: <ErrorPage />,
         },
     ],
 },

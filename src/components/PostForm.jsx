@@ -74,7 +74,7 @@ export default function PostForm({ post }) {
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
             <div className="w-2/3 px-2">
                 <Input
-                    label="Title :"
+                    label="Title : (in 255 characters)"
                     placeholder="Title"
                     className="mb-4"
                     {...register("title", { required: true })}
@@ -90,7 +90,7 @@ export default function PostForm({ post }) {
                     }}
                     disabled
                 />
-                <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
+                <RTE label="Content : (in 1000 characters)" name="content" control={control} defaultValue={getValues("content")} />
             </div>
             <div className="w-1/3 px-2">
                 <Input

@@ -12,6 +12,7 @@ import PostForm from "./PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
 import Input from "./Input";
+import ErrorPage from "./ErrorPage";
 export {
     Header,
     Footer,
@@ -27,4 +28,5 @@ export {
     AuthLayout, 
     Input,
     Select,
+    ErrorPage,
 }
