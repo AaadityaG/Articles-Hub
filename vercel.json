@@ -1,7 +1,8 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/all-posts" },
-    { "source": "/post/(.*)", "destination": "/post/$1" },
-    { "source": "/add-post", "destination": "/add-post" }
+      {
+          "source": "/(.*)",
+          "destination": "/"
+      }
   ]
 }
