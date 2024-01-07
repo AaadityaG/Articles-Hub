@@ -4,9 +4,6 @@
         "source": "/", "destination": "/all-posts"
       },
       {
-        "source": "/", "destination": "/all-posts"
-      },
-      {
         "source": "/", "destination": "/post/(.*)"
       },
       {
