@@ -71,8 +71,8 @@ export default function PostForm({ post }) {
     }, [watch, slugTransform, setValue]);
 
     return (
-        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
+        <form onSubmit={handleSubmit(submit)} className="text-white flex flex-wrap justify-center md:flex-row sm:flex-col">
+            <div className="w-full md:w-2/3 px-2 mb-4 md:mb-0">
                 <Input
                     label="Title : (in 255 characters)"
                     placeholder="Title"
@@ -92,7 +92,7 @@ export default function PostForm({ post }) {
                 />
                 <RTE label="Content : (in 1000 characters)" name="content" control={control} defaultValue={getValues("content")} />
             </div>
-            <div className="w-1/3 px-2">
+            <div className="w-full md:w-1/3 px-2">
                 <Input
                     label="Featured Image :"
                     type="file"

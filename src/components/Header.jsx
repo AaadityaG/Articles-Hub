@@ -45,13 +45,12 @@ function Header() {
   };
 
   return (
-    <header className='py-3 shadow' style={{headerStyles}}>
+    <header className='py-3 shadow text-white backdrop-blur-lg' style={{headerStyles}}>
       <Container>
-        <nav className='flex'>
+        <nav className='flex justify-center'>
           <div className='mr-4'>
             <Link to='/'>
-              <Logo width='70px'   />
-
+              <Logo />
               </Link>
           </div>
           <ul className='flex ml-auto'>
@@ -60,7 +59,7 @@ function Header() {
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
+                className='inline-bock px-6 py-2 duration-200 bg-gradient-to-r hover:to-rose-500 hover:via-rose-500  hover:from-orange-300 rounded-full'
                 >{item.name}</button>
               </li>
             ) : null

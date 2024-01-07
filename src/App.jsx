@@ -25,7 +25,7 @@ function App() {
   
   return !loading ? (
 
-    <div className='min-h-screen flex flex-col ' style={{background: 'linear-gradient(135deg, #fa6161, #ffff79)'}}>
+    <div className='min-h-screen flex flex-col ' >
       <Header />
 
         <main className='flex-grow'>

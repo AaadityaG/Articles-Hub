@@ -18,7 +18,7 @@ function Login() {
       const session = await authService.login(data);
       if (session) {
         const userData = await authService.getCurrentUser();
-        if (userData) dispatch(authLogin(userData));
+        if (userData) dispatch(authLogin({userData}));
         navigate("/");
       }
     } catch (error) {
@@ -30,7 +30,7 @@ function Login() {
   return (
     <div className="flex items-center justify-center w-full mt-8 mb-8">
       <div
-        className={`mx-auto w-full max-w-lg rounded-xl p-10 border bg-yellow-200 border-black/10`}
+        className={`mx-auto w-full max-w-lg rounded-xl text-white p-10 backdrop-blur-lg  bg-gradient-to-r to-rose-500 via-rose-500  from-orange-300 `}
       >
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
@@ -40,7 +40,7 @@ function Login() {
         <h2 className="text-center text-2xl font-bold leading-tight">
           Sign in to your account
         </h2>
-        <p className="mt-2 text-center text-base text-black/60">
+        <p className="mt-2 text-center text-base ">
           Don&apos;t have any account?&nbsp;
           <Link
             to="/signup"
@@ -73,7 +73,7 @@ function Login() {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full bg-rose-400 hover:bg-rose-500">
+            <Button type="submit" className="w-full hover:opacity-70">
               Sign in
             </Button>
           </div>

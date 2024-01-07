@@ -6,13 +6,13 @@ function PostCard({$id, title, featuredImage}) {
 
   // bit css
   const outer = {
-    background:"linear-gradient(158deg, #ff9696, #ffff9a, #ffd27ed3)",
-    boxSizing:'border-box'
+    // background:"linear-gradient(158deg, #ff9696, #ffff9a, #ffd27ed3)",
+    // boxSizing:'border-box'
   };
     
   return (
     <Link to={`/post/${$id}`}>
-        <div className='w-full rounded-xl p-4' style={outer}>
+        <div className='prose w-full rounded-xl p-4 backdrop-blur-lg border-2 border-rose-300 border-solid text-white' style={outer}>
             <div className='w-full justify-center mb-4'>
                 <img src={appwriteService.getFilePreview(featuredImage)} alt={title}
                 className='rounded-xl' />

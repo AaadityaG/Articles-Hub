@@ -14,19 +14,21 @@ function AllPosts() {
     if(posts.length === 0){
         return (
             <>
-            <div className="flex flex-col items-center justify-center mt-1 mb-2">
-            <img
-                src="https://illustrations.popsy.co/amber/taking-notes.svg"
-                alt="No Articles Illustration"
-                className=" w-2/6"
-            />
-            <h2 className="mt-4 text-black text-2xl font-semibold">
-                Loading the articles..
-            </h2>
-            <p className="text-black text-lg text-center mt-2">
-                {/* It looks like there are no articles available at the moment. */} Till then..
-                <br /> Why not start creating your own masterpiece?
-            </p>
+            <div className='w-full py-16 backdrop-blur-lg'>
+            <div className="flex flex-col text-white items-center justify-center mt-1 mb-2 ">
+                <img
+                    src="https://illustrations.popsy.co/red/taking-notes.svg"
+                    alt="No Articles Illustration"
+                    className=" w-2/6 "
+                />
+                <h2 className="mt-4  text-2xl font-semibold">
+                    Loading the articles..
+                </h2>
+                <p className=" text-lg text-center mt-2">
+                    {/* It looks like there are no articles available at the moment. */} Till then..
+                    <br /> Why not start creating your own masterpiece?
+                </p>
+            </div>
             </div>
             </>
         )
