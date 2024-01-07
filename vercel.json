@@ -1,16 +1,7 @@
 {
-    "rewrites":  [
-      {
-        "source": "/", "destination": "/all-posts"
-      },
-      {
-        "source": "/", "destination": "/post/(.*)"
-      },
-      {
-        "source": "/", "destination": "/add-post"
-      },
-      {
-        "source": "/add-post", "destination": "/post/(.*)"
-      }
-    ]
+  "rewrites": [
+    { "source": "/", "destination": "/all-posts" },
+    { "source": "/post/(.*)", "destination": "/post/$1" },
+    { "source": "/add-post", "destination": "/add-post" }
+  ]
 }
