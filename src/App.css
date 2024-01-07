@@ -1,4 +1,0 @@
-main {
-    flex-grow: 1;
-    overflow-y: auto; /* Add this to enable vertical scrolling for content inside main */
-}
