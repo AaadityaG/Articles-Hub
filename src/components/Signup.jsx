@@ -59,11 +59,14 @@ function Signup() {
                         {...register("name", {
                             required: true,
                         })}
+                        className="bg-orange-200 border-none focus:bg-white focus:text-black"
+                        
                         />
                         <Input
                         label="Email: "
                         placeholder="Enter your email"
                         type="email"
+                        className="bg-orange-200 border-none focus:bg-white focus:text-black"
                         {...register("email", {
                             required: true,
                             validate: {
@@ -78,6 +81,7 @@ function Signup() {
                         placeholder="Enter your password"
                         {...register("password", {
                             required: true,})}
+                        className="bg-orange-200 border-none focus:bg-white focus:text-black"
                         />
                         <Button type="submit" className="w-full hover:opacity-70" >
                             {loading ? <Loading /> : "Create Account"}
