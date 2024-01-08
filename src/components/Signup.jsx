@@ -5,16 +5,19 @@ import {login} from '../store/authSlice'
 import {Button, Input, Logo} from './index.js'
 import {useDispatch} from 'react-redux'
 import {useForm} from 'react-hook-form'
+import Loading from './Loading.jsx'
 
 function Signup() {
     const navigate = useNavigate()
     const [error, setError] = useState("")
     const dispatch = useDispatch()
     const {register, handleSubmit} = useForm()
+    const [loading, setLoading] = useState(false);
 
     const create = async(data) => {
         setError("")
         try {
+            setLoading(true);
             const userData = await authService.createAccount(data)
             if (userData) {
                 const userData = await authService.getCurrentUser()
@@ -23,6 +26,8 @@ function Signup() {
             }
         } catch (error) {
             setError(error.message)
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -75,7 +80,7 @@ function Signup() {
                             required: true,})}
                         />
                         <Button type="submit" className="w-full hover:opacity-70" >
-                            Create Account
+                            {loading ? <Loading /> : "Create Account"}
                         </Button>
                     </div>
                 </form>

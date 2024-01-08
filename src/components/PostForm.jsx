@@ -1,9 +1,10 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Input, RTE, Select } from ".";
 import appwriteService from "../appwrite/config";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Loading from "./Loading";
 
 export default function PostForm({ post }) {
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
@@ -17,8 +18,10 @@ export default function PostForm({ post }) {
 
     const navigate = useNavigate();
     const userData = useSelector((state) => state.auth.userData);
+    const [loading, setLoading] = useState(false);
 
     const submit = async (data) => {
+        setLoading(true);
         if (post) {
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
@@ -47,6 +50,7 @@ export default function PostForm({ post }) {
                 }
             }
         }
+        setLoading(false);
     };
 
     const slugTransform = useCallback((value) => {
@@ -116,7 +120,7 @@ export default function PostForm({ post }) {
                     {...register("status", { required: true })}
                 />
                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
-                    {post ? "Update" : "Submit"}
+                    {loading ? <Loading /> : (post ? "Update" : "Submit")}
                 </Button>
             </div>
         </form>

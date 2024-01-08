@@ -5,16 +5,19 @@ import { Button, Input, Logo } from "./index";
 import { useDispatch } from "react-redux";
 import authService from "../appwrite/auth";
 import { useForm } from "react-hook-form";
+import Loading from "./Loading";
 
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const login = async (data) => {
     setError("");
     try {
+      setLoading(true);
       const session = await authService.login(data);
       if (session) {
         const userData = await authService.getCurrentUser();
@@ -23,6 +26,8 @@ function Login() {
       }
     } catch (error) {
       setError(error.message);
+    } finally{
+      setLoading(false);
     }
   };
 
@@ -74,7 +79,7 @@ function Login() {
               })}
             />
             <Button type="submit" className="w-full hover:opacity-70">
-              Sign in
+            {loading ? <Loading /> : "Sign in"}
             </Button>
           </div>
         </form>
