@@ -55,13 +55,13 @@ function Login() {
           </Link>
         </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
-        <form onSubmit={handleSubmit(login)} className="mt-8">
+        <form onSubmit={handleSubmit(login)} className="mt-8 ">
           <div className="space-y-5">
             <Input
               label="Email: "
               placeholder="Enter your email"
               type="email"
-              className="bg-orange-200 border-none focus:bg-white text-black"
+              className="bg-orange-200 border-none focus:bg-white focus:text-black text-black"
               {...register("email", {
                 required: true,
                 validate: {
@@ -75,7 +75,7 @@ function Login() {
               label="Password: "
               type="password"
               placeholder="Enter your password"
-              className="bg-orange-200 border-none focus:bg-white text-black"
+              className="bg-orange-200 border-none focus:bg-white focus:text-black text-black"
               {...register("password", {
                 required: true,
               })}

@@ -59,14 +59,14 @@ function Signup() {
                         {...register("name", {
                             required: true,
                         })}
-                        className="bg-orange-200 border-none focus:bg-white text-black"
+                        className="bg-orange-200 border-none focus:bg-white focus:text-black text-black"
                         
                         />
                         <Input
                         label="Email: "
                         placeholder="Enter your email"
                         type="email"
-                        className="bg-orange-200 border-none focus:bg-white text-black"
+                        className="bg-orange-200 border-none focus:bg-white focus:text-black text-black"
                         {...register("email", {
                             required: true,
                             validate: {
