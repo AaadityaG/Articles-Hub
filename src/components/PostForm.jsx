@@ -76,14 +76,14 @@ export default function PostForm({ post }) {
                 <Input
                     label="Title : (in 255 characters)"
                     placeholder="Title"
-                    className="mb-4"
+                    className="mb-4 bg-gray-700"
                     {...register("title", { required: true })}
                     
                 />
                 <Input
                     label="Slug :"
                     placeholder="Slug"
-                    className="mb-4 "
+                    className="mb-4 bg-gray-700"
                     {...register("slug", { required: true })}
                     onInput={(e) => {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
@@ -96,7 +96,7 @@ export default function PostForm({ post }) {
                 <Input
                     label="Featured Image :"
                     type="file"
-                    className="mb-4"
+                    className="mb-4 bg-gray-700"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image", { required: !post })}
                 />
