@@ -82,7 +82,6 @@ function Header() {
                   </li>
                 )}
               </ul>
-              {/* <ul id='sidebar' className='flex ml-auto visible max-sm:visible md:invisible lg:invisible p-4'> */}
               <ul
                 id="sidebar"
                 className="flex ml-auto max-sm:flex md:hidden lg:hidden p-4"
@@ -110,7 +109,7 @@ function Header() {
           } flex items-center justify-center gap-28 flex-col z-20 list-none lg:translate-x-0 transition-transform duration-500 ease-in-out fixed top-0 right-0 h-full overflow-y-auto`}
         >
           <button
-            className="text-2xl p-2 focus:outline-none lg:hidden p-3 duration-200 bg-gradient-to-r hover:to-rose-500 hover:via-rose-500  hover:from-orange-300 rounded-full"
+            className="text-2xl border-none focus:outline-none lg:hidden p-3 duration-200 bg-gradient-to-r hover:to-rose-500 hover:via-rose-500  hover:from-orange-300 rounded-full"
             onClick={closeSidebar}
           >
             <IoMdCloseCircleOutline />
@@ -132,7 +131,7 @@ function Header() {
               ) : null
             )}
             {authStatus && (
-              <li>
+              <li onClick={closeSidebar}>
                 <LogoutBtn />
               </li>
             )}
