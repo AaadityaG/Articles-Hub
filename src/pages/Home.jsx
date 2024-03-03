@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import appwriteService from "../appwrite/config";
 import { Container, PostCard } from "../components";
-import Hero from "../assets/hero.svg";
+import Hero from "../assets/sapiens.svg";
 
 function Home() {
   return (
